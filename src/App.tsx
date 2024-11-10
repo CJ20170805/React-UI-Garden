@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Button from "./components/Button/Button";
 import Dropdown from "./components/Dropdown/Dropdown";
 import Table from "./components/Table/Table";
@@ -33,15 +33,28 @@ function App() {
         </div>
         <Table
           headers={[
-            {display: "Title", key: "title"},
-            {display: "Description", key: "description"},
-            {display: "Link", key: "link"},
-            {display: "Tech List", key: "tech"},
-            {display: "Image", key: "image"}
+            { display: "Title", key: "title" },
+            { display: "Description", key: "description" },
+            { display: "Link", key: "link" },
+            { display: "Tech List", key: "tech" },
+            { display: "Image", key: "image" },
           ]}
           data={[
-            { title: "Ruby-CRM-PROJECT", description: "A CRM project developed by Ruby", link: "https://github.com/CJ20170805/Ruby-CRM-PROJECT", tech: "Ruby", image: Project1 },
-            { title: "Information System", description: "This application is designed to help organizations easily publish events or news on their website", link: "https://github.com/CJ20170805/CMS-Laravel", tech: "PHP, React", image: Project2 },
+            {
+              title: "Ruby-CRM-PROJECT",
+              description: "A CRM project developed by Ruby",
+              link: "https://github.com/CJ20170805/Ruby-CRM-PROJECT",
+              tech: "Ruby",
+              image: Project1,
+            },
+            {
+              title: "Information System",
+              description:
+                "This application is designed to help organizations easily publish events or news on their website",
+              link: "https://github.com/CJ20170805/CMS-Laravel",
+              tech: "PHP, React",
+              image: Project2,
+            },
           ]}
         />
       </section>
@@ -69,20 +82,42 @@ function App() {
       {/* Resources Section */}
       <section>
         <h2>Resources</h2>
-        <div style={{display: 'flex', justifyContent: 'space-around', margin: '20px'}}>
-          <Card title="React Documentation" content="Official React docs to get started." />
-          <Card title="Node.js Docs" content="Official Node.js documentation for backend development." />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            margin: "20px",
+          }}
+        >
+          <Card
+            title="React Documentation"
+            content="Official React docs to get started."
+          />
+          <Card
+            title="Node.js Docs"
+            content="Official Node.js documentation for backend development."
+          />
         </div>
         <Table
           headers={[
-            {display: "Title", key: "title"},
-            {display: "Image", key: "image"},
-            {display: "Summary", key: "summary"},
-            {display: "Link", key: "link"},
+            { display: "Title", key: "title" },
+            { display: "Image", key: "image" },
+            { display: "Summary", key: "summary" },
+            { display: "Link", key: "link" },
           ]}
           data={[
-            { title: "React Docs", summary: "Learn React", link: "https://reactjs.org/", image: ReactImg },
-            { title: "Node.js Docs", summary: "Learn Node.js", link: "https://nodejs.org/en/docs/", image: NodeImg },
+            {
+              title: "React Docs",
+              summary: "Learn React",
+              link: "https://reactjs.org/",
+              image: ReactImg,
+            },
+            {
+              title: "Node.js Docs",
+              summary: "Learn Node.js",
+              link: "https://nodejs.org/en/docs/",
+              image: NodeImg,
+            },
           ]}
         />
       </section>

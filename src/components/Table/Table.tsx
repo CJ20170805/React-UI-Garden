@@ -31,17 +31,21 @@ const Table: React.FC<TableProps> = ({ headers, data, isdisabled }) => {
       </thead>
       <tbody>
         {data.map((row, rowIndex) => (
-           <tr key={rowIndex}>
-           {headers.map((header, cellIndex) => (
-             <StyledTd key={cellIndex} isdisabled={isdisabled ? "true" : ""}>
+          <tr key={rowIndex}>
+            {headers.map((header, cellIndex) => (
+              <StyledTd key={cellIndex} isdisabled={isdisabled ? "true" : ""}>
                 {header.key === "image" ? (
-                  <img src={row[header.key]} alt="Table image" style={{ width: "100px", height: "60px" }} />
+                  <img
+                    src={row[header.key]}
+                    alt="Table image"
+                    style={{ width: "100px", height: "60px" }}
+                  />
                 ) : (
                   row[header.key as keyof typeof row]
                 )}
-             </StyledTd>
-           ))}
-         </tr>
+              </StyledTd>
+            ))}
+          </tr>
         ))}
       </tbody>
     </StyledTable>
