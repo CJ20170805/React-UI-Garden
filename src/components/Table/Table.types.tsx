@@ -1,5 +1,5 @@
 export interface TableProps {
-  headers: string[]; // Array of headers for the table
-  data: Array<{ id: number; name: string }>; // Adjust based on the data structure you expect
+  headers: Array<{ display: string; key: string }>; // Adjusted to accept objects
+  data: Array<Record<string, any>>; // Flexible structure for data
   isdisabled?: boolean; // Optional property to control the disabled state
 }

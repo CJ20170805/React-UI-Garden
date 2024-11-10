@@ -25,19 +25,23 @@ const Table: React.FC<TableProps> = ({ headers, data, isdisabled }) => {
       <thead>
         <tr>
           {headers.map((header, index) => (
-            <StyledTh key={index}>{header}</StyledTh>
+            <StyledTh key={index}>{header.display}</StyledTh>
           ))}
         </tr>
       </thead>
       <tbody>
         {data.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            {headers.map((header, cellIndex) => (
-              <StyledTd key={cellIndex} isdisabled={isdisabled ? "true" : ""}>
-                {row[header as keyof typeof row]} {/* Ensure correct mapping */}
-              </StyledTd>
-            ))}
-          </tr>
+           <tr key={rowIndex}>
+           {headers.map((header, cellIndex) => (
+             <StyledTd key={cellIndex} isdisabled={isdisabled ? "true" : ""}>
+                {header.key === "image" ? (
+                  <img src={row[header.key]} alt="Table image" style={{ width: "100px", height: "60px" }} />
+                ) : (
+                  row[header.key as keyof typeof row]
+                )}
+             </StyledTd>
+           ))}
+         </tr>
         ))}
       </tbody>
     </StyledTable>

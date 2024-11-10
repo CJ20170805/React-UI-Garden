@@ -5,7 +5,10 @@ import { render, screen } from "@testing-library/react";
 import Table from "./Table";
 
 describe("Table Component", () => {
-  const headers = ["id", "name"];
+  const headers = [
+    { display: "ID", key: "id" },
+    { display: "Name", key: "name" },
+  ];
   const data = [
     { id: 1, name: "Row 1" },
     { id: 2, name: "Row 2" },
@@ -19,7 +22,7 @@ describe("Table Component", () => {
 
     // Check if headers are rendered
     headers.forEach((header) => {
-      expect(screen.getByText(header)).toBeInTheDocument();
+      expect(screen.getByText(header.display)).toBeInTheDocument();
     });
 
     // Check if data rows are rendered
