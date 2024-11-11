@@ -1,5 +1,4 @@
-# Component Library Web Application
-
+# Portfolio Site - Docker Deployment Instructions
 
 ### Step 1: Clone the Repository
 
@@ -16,16 +15,16 @@ cd cao_jiale_ui_garden
 2. Build the Docker image using the following command:
 
    ```bash
-   docker build -t cao_jiale_coding_assignment13 .
+   docker build -t portfolio_site .
    ```
 
 ### Step 3: Run the Docker Container
 
   ```bash
-  docker run -d -p 8018:8018 --name cao_jiale_coding_assignment13 cao_jiale_coding_assignment13
+  docker run -d --name cao_jiale_coding_assignment14 -p 5575:5575 portfolio_site
   ```
 
 ### Step 4: Access the Application
   ```bash
-  http://localhost:8018
+  http://localhost:5575
   ```
